@@ -15,10 +15,12 @@ showUserInfo({
 });
 
 // エラー例
+// @ts-expect-error
 showUserInfo({
 	name: "Mary Sue",
 	private: false,
 });
+// @ts-expect-error
 const usr: User = {
 	name: "Gombe Nanashino",
 	age: 100,
