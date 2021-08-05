@@ -1,9 +1,14 @@
-// interface Obj<T> {
-//     foo?: T
+// interface Obj {
+//     foo?: number | string | boolean
+// 	hoge?: boolean
 // }
 
-function getFoo<T>(obj: T): "foo" extends keyof T ? T["foo"] : unknown {
-	return obj.foo;
+interface hoge {
+	foo?: number
+}
+
+function getFoo<T extends object>(obj: T): "foo" extends keyof T ? T["foo"] : unknown {
+	return (obj as ).foo;
 }
 
 // T {foo: 123}
