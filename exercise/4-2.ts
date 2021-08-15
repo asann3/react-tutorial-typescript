@@ -1,4 +1,4 @@
-function giveId<T>(obj: T): "id" extends T ? T : Pick<T, Exclude<keyof T, 'id'>> & {id: string} {
+function giveId<T>(obj: T): Pick<T, Exclude<keyof T, 'id'>> & {id: string} {
 	const id = "本当はランダムがいいけどここではただの文字列";
 	return {
 		...obj,
